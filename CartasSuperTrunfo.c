@@ -30,6 +30,9 @@ int main() {
     scanf("%f", &pib);
     printf("\n\n");
 
+
+//imprime todos atributos cadastrados
+
     printf("Sua cidade é: %s" , cidade);     
     printf("O código da sua cidade é: %s \n" , codigo);
     printf("O estado da sua cidade é: %s" , estado); 
