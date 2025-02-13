@@ -11,6 +11,9 @@ int main() {
     printf("Digite o nome da sua cidade: ");
     fgets(cidade, sizeof(cidade), stdin);
 
+    printf("Digite o estado da sua cidade: ");
+    fgets(estado, sizeof(estado), stdin);
+
     printf("Digite o código de área da sua cidade: ");
     scanf("%s", codigo);
 
@@ -25,15 +28,15 @@ int main() {
 
     printf("Qual o PIB da sua cidade? ");
     scanf("%f", &pib);
-    ("\n\n");
+    printf("\n\n");
 
-    printf("Sua cidade é: %s \n" , cidade);     
+    printf("Sua cidade é: %s" , cidade);     
     printf("O código da sua cidade é: %s \n" , codigo);
-    printf("O estado da sua cidade é: %s \n" , estado); 
+    printf("O estado da sua cidade é: %s" , estado); 
     printf("A população da sua cidade é: %i \n" , populacao); 
     printf("Sua cidade tem %i ponto(s) turístico(s). \n" , pontostur); 
-    printf("A área da sua cidade é: %f \n" , area); 
-    printf("O PIB da sua cidade é: %f \n" , pib); 
+    printf("A área da sua cidade é: %.2f \n" , area); 
+    printf("O PIB da sua cidade é: %.2f \n\n\n" , pib); 
 
     return 0;
 }
