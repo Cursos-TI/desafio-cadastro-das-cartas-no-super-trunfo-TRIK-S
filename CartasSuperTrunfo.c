@@ -38,8 +38,8 @@ int main() {
     printf("O estado da sua cidade é: %s" , estado); 
     printf("A população da sua cidade é: %i \n" , populacao); 
     printf("Sua cidade tem %i ponto(s) turístico(s). \n" , pontostur); 
-    printf("A área da sua cidade é: %.2f \n" , area); 
-    printf("O PIB da sua cidade é: %.2f \n\n\n" , pib); 
+    printf("A área da sua cidade é: %.2f km² \n" , area); 
+    printf("O PIB da sua cidade é: %.2f milões de reais \n\n\n" , pib); 
 
     return 0;
 }
