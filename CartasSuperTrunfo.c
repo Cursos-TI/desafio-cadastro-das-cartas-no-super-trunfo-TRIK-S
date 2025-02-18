@@ -1,8 +1,7 @@
 #include <stdio.h>
 int main() {
         //definindo as variáriáveis
-    char cidade[100], cidade2[100] , estado[100] , estado2[100] , codigo[] = "a01" 
-    , codigo2[] = "a02";
+    char cidade[100], cidade2[100], estado[100], estado2[100], codigo[]="a01", codigo2[]= "a02";
     int populacao , populacao2 , pontostur , pontostur2;
     float area , area2 , pib , pib2;
 
@@ -52,7 +51,7 @@ int main() {
 //imprime todos atributos cadastrados
 
     printf("O código da primeira cidade é: %s \n" , codigo);
-    printf("/cidade: %s" , cidade);  
+    printf("cidade: %s" , cidade);  
     printf("Estado: %s" , estado); 
     printf("População: %i \n" , populacao); 
     printf("ponto(s) turístico(s): %i \n" , pontostur); 
