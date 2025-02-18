@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
         //definindo as variáriáveis
-    char codigo = 'a01'; 
+    char codigo[3] = "a01"; 
     char cidade[100];
     char estado[100];
     int populacao , pontostur;
