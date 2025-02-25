@@ -76,6 +76,5 @@ int main() {
     printf("Densidade populacional é: %.3f hab/km² \n", densipop2);
     printf("PIB percapta: %.3f reais \n", pibperc2);
     
-
     return 0;
 }
