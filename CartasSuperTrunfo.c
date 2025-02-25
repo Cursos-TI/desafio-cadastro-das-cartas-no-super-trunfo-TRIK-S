@@ -24,7 +24,7 @@ int main() {
     printf("Qual a área da sua cidade? ");
     scanf("%f", &area);
 
-    printf("Qual o PIB da sua cidade? ");
+    printf("Qual o PIB da sua cidade?");
     scanf("%f", &pib);
     printf("\n\n");
 
