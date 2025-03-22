@@ -92,6 +92,7 @@ int main()
     printf("PIB percapta: %.3f reais \n", pibperc2);
     printf("Superpoder: %.3f \n", superpoder2);
 
+    //menu para escolher os atributos a serem comparados
     printf("Agora escolha dois atributos para comparar!\n\n");
     printf("1. População \n2. Pontos turísticos \n3. Área \n4. Pib \n5. Densidade Populacional \n");
     printf("Primeiro atributo: ");
@@ -101,6 +102,7 @@ int main()
     printf("Segundo atributo: ");
     scanf("%d" , &escolha2);
 
+    //finaliza o código caso os atributos escolhidos sejam iguais
     if(escolha1 != escolha2){
 
      printf("\nGerando comparação \n");
@@ -108,7 +110,7 @@ int main()
       printf("Escolha inválida, os atributos devem ser diferentes! \n");
       abort();
     }
-
+    //exibe os atributos escolhidos de acordo com a primeira escolha
     switch(escolha1){
         case 1:
         printf("Carta %s%s: %d - " , estado, code, populacao);
@@ -145,7 +147,7 @@ int main()
         atributo2 = densipop2;
         break;
     }
-
+            //exibe os atributos escolhidos de acordo com a segunda escolha
         switch(escolha2){
             case 1:
             printf("Carta %s%s: %d - " , estado, code, populacao);
@@ -183,9 +185,11 @@ int main()
             break;
         }
 
+            //soma os atributos escolhidos
              float resultado1 = atributo1 + atributo3;
              float resultado2 = atributo2 + atributo4;
 
+            //exibe a carta vencedora e a pontuação
             resultado1 > resultado2 ? printf("Carta %s%s venceu!!! Pontos: %.2f \n" , estado, code, resultado1) :
                 printf("Carta %s%s venceu!!! Pontos: %.2f \n" , estado2, code2, resultado2);
 
