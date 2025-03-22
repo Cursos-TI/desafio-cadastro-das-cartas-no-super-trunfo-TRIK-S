@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include<stdlib.h>
 int main()
 {
     // definindo as variáriáveis
     char cidade[100], cidade2[100], estado[3], estado2[3];
     char code[] = "01";
     char code2[] = "02";
-    int populacao, populacao2, pontostur, pontostur2, escolha;
-    float area, area2, pib, pib2, densipop, pibperc, densipop2, pibperc2;
+    int populacao, populacao2, pontostur, pontostur2, escolha1, escolha2;
+    float area, area2, pib, pib2, densipop, pibperc, densipop2, pibperc2, atributo1, atributo2, atributo3, atributo4;
     double superpoder1, superpoder2;
 
     printf("### SUPERTRUNFO ### \n");
@@ -89,92 +90,105 @@ int main()
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Densidade populacional é: %.3f hab/km² \n", densipop2);
     printf("PIB percapta: %.3f reais \n", pibperc2);
-    printf("Superpoder: %.3f", superpoder2);
+    printf("Superpoder: %.3f \n", superpoder2);
 
-    // compara os atributos das cartas qual é maior e exibe 1 para verdadeiro e 0 para falso
-    printf("\n\nA população da cidade %s%s é maior do que da cidade %s%s? %i \n", estado, code,
-           estado2, code2, (populacao > populacao2));
-    printf("A cidade %s%s tem mais pontos turísticos do que da cidade %s%s? %i \n", estado, code,
-           estado2, code2, (pontostur > pontostur2));
-    printf("A área da cidade %s%s é maior do que a área da cidade %s%s? %i \n", estado, code,
-           estado2, code2, (area > area2));
-    printf("O PIB da cidade %s%s é maior do que o PIB da cidade %s%s? %i \n", estado, code,
-           estado2, code2, (pib > pib2));
-    printf("A densidade populacional da cidade %s%s é maior do que a densidade populacional da cidade %s%s? %i \n", estado, code, estado2, code2, (densipop > densipop2));
-    printf("O PIB percapta da cidade %s%s é maior do que o PIB percapta da cidade %s%s? %i \n", estado, code,
-           estado2, code2, (pibperc > pibperc2));
+    printf("Agora escolha dois atributos para comparar!\n\n");
+    printf("1. População \n2. Pontos turísticos \n3. Área \n4. Pib \n5. Densidade Populacional \n");
+    printf("Primeiro atributo: ");
+    scanf("%d" , &escolha1);
 
-    printf("Escolha o atributo que deseja comparar!\n\n");
-    printf("1. População \n2. Pontos turísticos \n3. Área \n4. Pib \n5. Densidade Populacional \n");    
-    scanf("%d" , &escolha);
+    printf("\n6. População \n7. Pontos turísticos \n8. Área \n9. Pib \n10. Densidade Populacional \n");
+    printf("Segundo atributo: ");
+    scanf("%d" , &escolha2);
 
-    switch(escolha){
+    if(escolha1 != escolha2){
+
+     printf("\nGerando comparação \n");
+    }else{
+      printf("Escolha inválida, os atributos devem ser diferentes! \n");
+      abort();
+    }
+
+    switch(escolha1){
         case 1:
         printf("Carta %s%s: %d - " , estado, code, populacao);
         printf("Carta %s%s: %d.\n" , estado2, code2, populacao2);
-        if(populacao == populacao2){
-            printf("### EMPATE! ### \n");
-        }
-        else if(populacao > populacao2){
-            printf("Carta %s%s venceu" , estado , code);
-        }else{
-            printf("Carta %s%s venceu" , estado2 , code2);
-        }
+        atributo1 = populacao;
+        atributo2 = populacao2;
         break;
 
         case 2:
         printf("Carta %s%s: %d - " , estado, code, pontostur);
         printf("Carta %s%s: %d.\n" , estado2, code2, pontostur2);
-        if(pontostur == pontostur2){
-            printf("### EMPATE! ### \n");
-        }
-        else if(pontostur > pontostur2){
-            printf("Carta %s%s venceu\n" , estado , code);
-        }else{
-            printf("Carta %s%s venceu\n" , estado2 , code2);
-        }
+        atributo1 = pontostur;
+        atributo2 = pontostur2;
         break;
 
         case 3:
         printf("Carta %s%s: %.2f - " , estado, code, area);
         printf("Carta %s%s: %.2f.\n" , estado2, code2, area2);
-        if(area == area2){
-            printf("### EMPATE! ### \n");
-        }
-        else if(area > area2){
-            printf("Carta %s%s venceu\n" , estado , code);
-        }else{
-            printf("Carta %s%s venceu\n" , estado2 , code2);
-        }
+        atributo1 = area;
+        atributo2 = area2;
         break;
 
         case 4:
         printf("Carta %s%s: %.2f - " , estado, code, pib);
         printf("Carta %s%s: %.2f\n." , estado2, code2, pib2);
-        if(pib == pib2){
-            printf("### EMPATE! ### \n");
-        }
-        else if(pib > pib2){
-            printf("Carta %s%s venceu\n" , estado , code);
-        }else{
-            printf("Carta %s%s venceu\n" , estado2 , code2);
-        }
+        atributo1 = pib;
+        atributo2 = pib2;
         break;
 
         case 5:
         printf("Carta %s%s: %.2f - " , estado, code, densipop);
         printf("Carta %s%s: %.2f.\n" , estado2, code2, densipop2);
-        if(densipop == densipop2){
-            printf("### EMPATE! ### \n");
-        }
-        else if(densipop < densipop2){
-            printf("Carta %s%s venceu\n" , estado , code);
-        }else{
-            printf("Carta %s%s venceu\n" , estado2 , code2);
-        }
+        atributo1 = densipop;
+        atributo2 = densipop2;
         break;
-
     }
+
+        switch(escolha2){
+            case 1:
+            printf("Carta %s%s: %d - " , estado, code, populacao);
+            printf("Carta %s%s: %d.\n" , estado2, code2, populacao2);
+            atributo3 = populacao;
+            atributo4 = populacao2;
+            break;
+
+            case 2:
+            printf("Carta %s%s: %d - " , estado, code, pontostur);
+            printf("Carta %s%s: %d.\n" , estado2, code2, pontostur2);
+            atributo3 = pontostur;
+            atributo4 = pontostur2;
+            break;
+
+            case 3:
+            printf("Carta %s%s: %.2f - " , estado, code, area);
+            printf("Carta %s%s: %.2f.\n" , estado2, code2, area2);
+            atributo3 = area;
+            atributo4 = area2;
+            break;
+
+            case 4:
+            printf("Carta %s%s: %.2f - " , estado, code, pib);
+            printf("Carta %s%s: %.2f\n." , estado2, code2, pib2);
+            atributo3 = pib;
+            atributo4 = pib2;
+            break;
+
+            case 5:
+            printf("Carta %s%s: %.2f - " , estado, code, densipop);
+            printf("Carta %s%s: %.2f.\n" , estado2, code2, densipop2);
+            atributo3 = densipop;
+            atributo4 = densipop2;
+            break;
+        }
+
+             float resultado1 = atributo1 + atributo3;
+             float resultado2 = atributo2 + atributo4;
+
+            resultado1 > resultado2 ? printf("Carta %s%s venceu!!! Pontos: %.2f \n" , estado, code, resultado1) :
+                printf("Carta %s%s venceu!!! Pontos: %.2f \n" , estado2, code2, resultado2);
+
 
 
     return 0;
